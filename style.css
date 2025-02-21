@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Lexend:wght@100..900&family=Rubik+Bubbles&family=Rubik:ital,wght@0,300..900;1,300..900&family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Knewave&family=Lexend:wght@100..900&family=Oi&family=Rubik+Bubbles&family=Rubik:ital,wght@0,300..900;1,300..900&family=Signika:wght@300..700&display=swap');
+
+.heading{
+    font-family: Knewave
+}
+
+*{
+    font-family: Fuzzy Bubbles;
+}
+
+.tasks{
+    border: 2px solid #0c2e50;
+    padding: 5px 20px;
+    width: 500px;
+    margin: 5px 0px;
+    border-radius: 20px;
+    display: flex;
+    height: 38px;
+    justify-content: space-between;
+}
+
+.tasks:hover{
+    background-color: rgb(90, 189, 189);
+}
+
+.actions{
+    display: none;
+}
+
+.circle{
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #52c9c9;
+    padding: 4px;
+}
+
+.calendar {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #ebcdc0;
+    border-radius: 10px;
+    max-height: 389px;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.calendar-header button {
+    padding: 5px;
+    cursor: pointer;
+}
+.calendar-header h2 {
+    margin: 0;
+}
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #c59b92;
+    padding: 5px;
+    font-weight: bold;
+}
+.days-of-week div {
+    text-align: center;
+}
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    padding: 5px;
+}
+.days div {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.days div:hover {
+    background-color: #ddd;
+}
+.current-day {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.highlight{
+    background-color: #488dce;
+    color: white;
+}
+
+.High{
+    background-color: #4b81b7;
+}
+
+.Medium{
+    background-color: #85abcf;
+}
+
+.Low{
+    background-color: #b4c7d9;
+}
+
+.darkmode{
+    background-color: #363535;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.calenderDark{
+    background-color: #435655;
+}
+
+.daydark{
+    background-color: #28341f;
+}
+
+.headWhite{
+    color: white;
+}
+
+.colorBlack{
+    color: black;
+}
+
+.marked{
+    text-decoration: line-through;
+}

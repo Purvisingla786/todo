@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-[#a3c2d1]">
+   
+    <div class="flex justify-center text-[#366887] p-4 heading">
+         
+        <h1 class="font-extrabold text-5xl">To-do List</h1>
+    </div>
+    <div class="flex justify-end mr-28">
+           <i class="fa-solid fa-circle-half-stroke" onclick="darkMode()"></i> 
+        </div>
+<div class="container flex justify-center">
+    <div class="grow p-4">
+        
+        <div class="flex justify-end">
+          <i class="fa-solid fa-plus circle" onclick="plus()"></i>  
+          
+        </div>
+        <div class="flex  gap-20 ">   
+            <div class="" id="taskList"></div>
+
+            <div class="calendar" id="calendar">
+                <div class="calendar-header">
+                    <button onclick="changeMonth(-1)">&#8592;</button>
+                    <h2 id="month-year"></h2>
+                    <button onclick="changeMonth(1)">&#8594;</button>
+                </div>
+                <div class="days-of-week" id="days-of-week">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="days" id="days"></div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div id="form" class="hidden p-4 space-y-5">
+        <label for="taskName" >Enter Task</label>
+        <div><input type="text" class="border-solid bg-white" id="taskName"></div>
+        <label for="dateName" >Enter Date</label>
+        <div><input type="date" class="border-solid bg-white" id="dateLabel"></div>
+        <label for="priority">Set Priority</label>
+       <div> <select name="priority" class="bg-white" id="priority">
+            <option  value="select" selected disabled>Select</option>
+            <option class="bg-[#4b81b7]" value="High">High</option>
+            <option class="bg-[#85abcf]" value="Medium">Medium</option>
+            <option class="bg-[#b4c7d9]" value="Low">Low</option>
+        </select></div>
+       <div><button class="border-solid bg-[#86a1a0] rounded-md px-2 py-1" id="btn" onclick="createTask()">Done</button></div> 
+    </div>
+    
+
+</div> 
+     
+
+     
+   <script src="script.js"></script> 
+</body>
+</html>

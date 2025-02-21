@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Lexend:wght@100..900&family=Rubik+Bubbles&family=Rubik:ital,wght@0,300..900;1,300..900&family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Knewave&family=Lexend:wght@100..900&family=Oi&family=Rubik+Bubbles&family=Rubik:ital,wght@0,300..900;1,300..900&family=Signika:wght@300..700&display=swap');
+
+.heading{
+    font-family: Knewave
+}
+
+*{
+    font-family: Fuzzy Bubbles;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.grow{
+    flex-grow: 1;
+}
+.listitems{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(161, 160, 160);
+    border-bottom: 1px solid rgb(161, 160, 160) ;
+    padding: 10px 0px;
+}
+
+.gap{
+    gap: 40px;
+}
+
+.p-4{
+    padding: 16px;
+}
+#taskList{
+    list-style: none;
+}
+
+.space{
+    margin: 20px 0px;
+}
+
+.iconm{
+    margin: 2px 5px;
+}
+
+.btn{
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: rgb(75, 152, 187);
+}
+
+.subheading{
+    color: rgb(94, 93, 93);
+}
+
+.listitems:hover{
+    background-color: rgb(146, 145, 216);
+}
+
+.marked{
+    background-color: rgb(192, 192, 196);
+}
+
+.darkmode{
+    background-color: #363535;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.sideList{
+    padding: 20px;
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.calendar {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #ebcdc0;
+    border-radius: 10px;
+    max-height: 389px;
+    display: none;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.calendar-header button {
+    padding: 5px;
+    cursor: pointer;
+}
+.calendar-header h2 {
+    margin: 0;
+}
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #c59b92;
+    padding: 5px;
+    font-weight: bold;
+}
+.days-of-week div {
+    text-align: center;
+}
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    padding: 5px;
+}
+.days div {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.days div:hover {
+    background-color: #ddd;
+}
+.current-day {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.highlight{
+    background-color: #488dce;
+    color: white;
+}
