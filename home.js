@@ -2,18 +2,24 @@ let tasks =JSON.parse( localStorage.getItem('tasks'))?JSON.parse( localStorage.g
 let currentDate = new Date();
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 function createTask(){
-    let task = document.querySelector('#taskName').value
-    let date = document.querySelector('#taskDate').value
-    
-    let newtask = {
-        task: task,
-        date: date,
-        done:false
-    } 
-    tasks.push(newtask)
-    localStorage.setItem(`tasks`,JSON.stringify(tasks));
-    reset()
-    getData();
+    debugger
+    if(document.querySelector('#createBtn').innerText == 'Update'){
+       return
+    }
+        let task = document.querySelector('#taskName').value
+            let date = document.querySelector('#taskDate').value
+            
+            let newtask = {
+                task: task,
+                date: date,
+                done:false
+            } 
+            tasks.push(newtask)
+            localStorage.setItem(`tasks`,JSON.stringify(tasks));
+            reset()
+            getData();
+   
+
 }   
 
 function getData(){
@@ -43,12 +49,7 @@ function updateHandle(i){
     document.querySelector('#taskDate').value = tasks[i].date;
     document.querySelector('#createBtn').innerText = 'Update';
 
-    // Remove the existing event listener, if any
-    if(document.querySelector('#createBtn').getAttribute("onclick")) {
-        document.querySelector('#createBtn').removeAttribute('onclick');
-    } else {
-        document.querySelector('#createBtn').removeEventListener('click', createTask);
-    }
+    
 
     // Add the update listener
     document.querySelector('#createBtn').addEventListener('click', () => handleUpdateClick(i));
@@ -56,6 +57,8 @@ function updateHandle(i){
 
 function updateTask(i) {
     debugger;
+    if(document.querySelector('#createBtn').innerText === 'Submit') return
+
     tasks[i].task =  document.querySelector('#taskName').value;
     tasks[i].date =  document.querySelector('#taskDate').value;
     localStorage.setItem(`tasks`, JSON.stringify(tasks));
@@ -64,11 +67,10 @@ function updateTask(i) {
     document.querySelector('#createBtn').innerText = 'Submit';
     
     // Remove the update listener
-    document.querySelector('#createBtn').removeEventListener('click', () => handleUpdateClick(i));
+    // document.querySelector('#createBtn').removeEventListener('click',  handleUpdateClick);
     
     // Add the create task listener back
-    document.querySelector('#createBtn').addEventListener('click', createTask);
-
+    
     getData(); 
 }
 
